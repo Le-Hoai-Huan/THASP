@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebBanHangMVC.Models.Order>
+@{
+    ViewData["Title"] = "Danh sách đơn hàng";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Danh sách đơn hàng</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Người đặt</th>
+            <th>Ngày đặt</th>
+            <th>Tổng tiền</th>
+            <th>Địa chỉ giao hàng</th>
+            <th>Ghi chú</th>
+            <th>Chi tiết</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.ApplicationUser?.FullName</td>
+                    <td>@order.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@order.TotalPrice VNĐ</td>
+                    <td>@order.ShippingAddress</td>
+                    <td>@order.Notes</td>
+                    <td>
+                        <a href="javascript:void(0)" onclick="loadOrderDetails(@order.Id)" class="btn btn-info btn-sm">Xem chi tiết</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal container cho chi tiết đơn hàng -->
+<div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="orderDetailsModalContent">
+            <!-- Nội dung modal sẽ được load động -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+        <script>
+            function loadOrderDetails(orderId) {
+                fetch(`/Admin/OrderDetails/${orderId}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('orderDetailsModalContent').innerHTML = data;
+                        var modal = new bootstrap.Modal(document.getElementById('orderDetailsModal'));
+                        modal.show();
+                    })
+                    .catch(error => console.error('Error loading order details:', error));
+            }
+        </script>
+}

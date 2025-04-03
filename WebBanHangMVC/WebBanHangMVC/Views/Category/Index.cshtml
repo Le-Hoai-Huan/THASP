@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@model IEnumerable<WebBanHangMVC.Models.Category>
+
+@{
+    ViewData["Title"] = "Danh sách danh mục";
+}
+
+<h1 class="mb-4 fw-bold text-primary text-center">Danh sách danh mục</h1>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+    @foreach (var item in Model)
+    {
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-semibold">@item.Name</h5>
+                        <div class="mt-3 d-flex justify-content-center gap-2">
+                            <a asp-action="Detils" asp-route-id="@item.Id" class="btn btn-outline-success btn-sm">Xem chi tiết</a>
+                        @if (User.IsInRole("Admin"))
+                        {
+                                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm">Chỉnh sửa</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm">Xóa</a>
+                        }
+                        </div>
+                    </div>
+                </div>
+            </div>
+    }
+</div>

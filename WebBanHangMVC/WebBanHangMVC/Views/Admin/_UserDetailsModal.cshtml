@@ -1,0 +1,14 @@
+﻿@model WebBanHangMVC.Models.ApplicationUser
+
+<div class="modal-header">
+    <h5 class="modal-title">Chi tiết người dùng #@Model.Id</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <p><strong>Tên người dùng:</strong> @Model.FullName</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Vai trò:</strong> @string.Join(", ", ViewBag.Roles)</p> <!-- Lấy vai trò từ ViewBag -->
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+</div>

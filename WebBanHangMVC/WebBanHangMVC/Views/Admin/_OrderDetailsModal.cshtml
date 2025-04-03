@@ -1,0 +1,39 @@
+﻿@model WebBanHangMVC.Models.Order
+
+<div class="modal-header">
+    <h5 class="modal-title">Chi tiết đơn hàng #@Model.Id</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <p><strong>Người đặt:</strong> @Model.ApplicationUser?.FullName</p>
+    <p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy HH:mm")</p>
+    <p><strong>Tổng tiền:</strong> @Model.TotalPrice VNĐ</p>
+    <p><strong>Địa chỉ giao hàng:</strong> @Model.ShippingAddress</p>
+    <p><strong>Ghi chú:</strong> @Model.Notes</p>
+
+    <h6>Sản phẩm trong đơn hàng:</h6>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Tổng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var detail in Model.OrderDetails)
+            {
+                    <tr>
+                        <td>@detail.Product?.Name</td>
+                        <td>@detail.Quantity</td>
+                        <td>@detail.Price VNĐ</td>
+                        <td>@(detail.Quantity * detail.Price) VNĐ</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+</div>

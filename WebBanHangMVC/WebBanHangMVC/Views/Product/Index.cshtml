@@ -1,0 +1,252 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using WebBanHangMVC.Models
+@{
+    int numOfQuantity = 1;
+    ViewData["Title"] = "Trang Chủ";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - WebBanHangMVC</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        .carousel-item {
+            height: 50vh;
+        }
+        .card {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px); /* Nâng thẻ lên 10px */
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px; /* Tăng bóng đổ để tạo cảm giác nổi */
+        }
+        .footer-cta {
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+        }
+        .price {
+            color: #263238;
+            font-size: 24px;
+        }
+        .card-title {
+            color: #263238;
+           
+        }
+        .sale {
+            color: #E53935;
+        }
+        .sale-badge {
+            background-color: #E53935;
+        }
+
+        
+        .bg-image {
+         width: 100%;
+         overflow: hidden; /* Đảm bảo không có phần thừa */
+        }
+
+        .bg-image img {
+            width: 100% !important;
+            height: 200px;
+            object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+            display: block; /* Xóa khoảng trống dưới hình ảnh */
+        }
+
+        .card {
+            overflow: hidden; /* Đảm bảo card không bị tràn */
+        }
+        /* Style mặc định cho nút Add to Cart */
+        .btn-outline-dark {
+            border-color: #343a40; /* Màu viền mặc định */
+            color: #343a40; /* Màu chữ mặc định */
+            transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+        }
+
+        /* Hiệu ứng hover cho nút Add to Cart */
+        .btn-outline-dark:hover {
+            background-color: #28a745; /* Màu nền xanh lá khi hover */
+            color: #fff; /* Màu chữ trắng khi hover */
+            border-color: #28a745; /* Màu viền khớp với màu nền */
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://sunsay.vn/wp-content/uploads/2021/09/rau-cu-tuoi.jpg" class="d-block w-100" alt="Slide 1" />
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+                <div class="carousel-caption d-none d-sm-block mb-5">
+                    <h1 class="mb-4"><strong>Chào mừng đến với WebBanHangMVC</strong></h1>
+                    <p><strong>Mua sắm dễ dàng, giá cả hợp lý</strong></p>
+                    <a asp-action="Index" class="btn btn-outline-white btn-lg">Khám phá ngay <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://viendinhduong.vn/FileUpload/Images/rau_cu_qua_tuoi.jpg" class="d-block w-100" alt="Slide 2" />
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+                <div class="carousel-caption d-none d-sm-block mb-5">
+                    <h1 class="mb-4"><strong>Sản phẩm đa dạng</strong></h1>
+                    <p><strong>Từ rau đến củ</p>
+                    <a asp-action="Index" class="btn btn-outline-white btn-lg">Xem thêm <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://lasuco.vn/wp-content/uploads/rau-cu-qua-lasuco.jpg" class="d-block w-100" alt="Slide 3" />
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+                <div class="carousel-caption d-none d-sm-block mb-5">
+                    <h1 class="mb-4"><strong>Ưu đãi hấp dẫn</strong></h1>
+                    <p><strong>Giảm giá lên đến 50%</strong></p>
+                    <a asp-action="Index" class="btn btn-outline-white btn-lg">Mua ngay <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Main layout -->
+    <main>
+        <div class="container">
+     <!-- Category Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark mt-3 mb-5 shadow p-2" style="background-color: #607D8B">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Danh mục:</a>
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active"><a class="nav-link text-white" href="#">Tất cả</a></li>
+                            <!-- Bạn có thể thêm danh sách danh mục động từ Model nếu muốn -->
+                        </ul>
+                        <!-- Search Form -->
+                       <div class="w-auto py-1" style="max-width: 12rem">
+                        <input type="search" id="searchInput" class="form-control rounded-0" placeholder="Tìm kiếm" aria-label="Search" value="@ViewData["CurrentFilter"]">
+                    </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Products -->
+            <section>
+    <div class="text-center">
+        <div id="productList" class="row">
+                        @foreach (var product in Model)
+                        {
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <a asp-action="Details" asp-route-id="@product.Id" class="text-decoration-none">
+                            <div class="card h-100">
+                                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light" style="position: relative;">
+                                    <img src="@product.ImageUrl" class="w-100" style="height: 200px; object-fit: cover; display: block;" alt="@product.Name" />
+                                    <div class="mask" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                        <div class="d-flex justify-content-start align-items-end h-100">
+                                            <h5><span class="badge bg-success ms-2">🌿 @product.Category?.Name</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="hover-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title mb-2">@product.Name</h5>
+                                    <p>@product.Category?.Name</p>
+                                    <h6 class="mb-3 price">@product.Price.ToString("C")</h6>
+                                    <p class="text-muted small fst-italic description">@product.Description</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pb-3 text-center">
+                                    <div class="d-flex flex-column gap-2 justify-content-center">
+                                        <a asp-controller="ShoppingCart" 
+                                           asp-action="AddToCart" 
+                                           asp-route-productId="@product.Id" 
+                                           asp-route-quantity="@numOfQuantity" 
+                                           class="btn btn-outline-dark btn-lg px-4 rounded-pill" 
+                                           onclick="event.stopPropagation();">
+                                            <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                            @if (User.IsInRole("Admin"))
+                                            {
+                                            <div class="d-flex justify-content-center gap-2 mt-3">
+                                                <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-outline-warning px-3 rounded-pill" onclick="event.stopPropagation();">✏️ Sửa</a>
+                                                <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-outline-danger px-3 rounded-pill" onclick="event.stopPropagation();">🗑️ Xóa</a>
+                                            </div>
+                                            }
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                        }
+        </div>
+    </div>
+</section>
+            <!-- Pagination -->
+            <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-3">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </nav>
+
+            @if (User.IsInRole("Admin"))
+            {
+                    <div class="text-center mt-5">
+                        <a asp-action="Add" class="btn btn-primary btn-lg px-5 py-2 footer-cta">➕ Thêm Sản Phẩm</a>
+                    </div>
+            }
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+
+
+    <script>
+    document.getElementById('searchInput').addEventListener('input', function () {
+        let searchString = this.value.trim();
+
+        // Gửi yêu cầu AJAX đến action Index
+        fetch('/Product/Index?searchString=' + encodeURIComponent(searchString), {
+            method: 'GET',
+            headers: {
+                'Accept': 'text/html'
+            }
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Parse HTML trả về và chỉ lấy phần danh sách sản phẩm
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const newProductList = doc.querySelector('#productList').innerHTML;
+            document.getElementById('productList').innerHTML = newProductList;
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+</body>
+</html>

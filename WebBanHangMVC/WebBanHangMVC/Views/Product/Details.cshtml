@@ -1,0 +1,23 @@
+﻿@model WebBanHangMVC.Models.Product
+
+<div class="container py-5">
+    <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="max-width: 600px; margin: 0 auto;">
+        <div class="card-header bg-primary text-white text-center py-4">
+            <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif;">🛍️ @Model.Name</h2>
+        </div>
+        <div class="card-body p-5">
+            <h3 class="text-success fw-bold">💰 Giá: @Model.Price.ToString("C")</h3>
+            <p class="mt-4" style="font-size: 1.1rem; line-height: 1.6;">📝 @Model.Description</p>
+
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                    <div class="text-center mt-4">
+                        <img src="@Model.ImageUrl" alt="Product Image" class="rounded-4 shadow-sm" style="max-width: 100%; height: auto; max-height: 300px; object-fit: cover;" />
+                    </div>
+            }
+        </div>
+        <div class="card-footer text-center bg-light py-4">
+            <a asp-action="Index" class="btn btn-secondary btn-lg px-5 py-2 rounded-4">🏠 Quay Trở Lại Trang Chủ</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebBanHangMVC.Models.Product>
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Chào mừng đến với Trang Quản trị</h2>
+<h3>Danh sách sản phẩm</h3>
+
+<!-- Nút Thêm sản phẩm mới -->
+<div class="mb-3">
+    <button class="btn btn-success" onclick="loadAddProductModal()">Thêm sản phẩm mới</button>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Mô tả</th>
+            <th>Hình ảnh</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Description</td>
+                    <td>
+                    @if (!string.IsNullOrEmpty(product.ImageUrl))
+                    {
+                                <img src="@product.ImageUrl" alt="@product.Name" style="width:50px; height:50px;" />
+                    }
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="loadEditModal(@product.Id)">Sửa</button>
+                        <form asp-action="Delete" asp-controller="Admin" asp-route-id="@product.Id" method="post" style="display:inline;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">
+                            <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal container cho chỉnh sửa sản phẩm -->
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="editProductModalContent">
+            <!-- Nội dung modal sẽ được load động -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal container cho thêm sản phẩm mới -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="addProductModalContent">
+            <!-- Nội dung modal sẽ được load động -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+        <script>
+            function loadEditModal(productId) {
+                fetch(`/Admin/Edit/${productId}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('editProductModalContent').innerHTML = data;
+                        var modal = new bootstrap.Modal(document.getElementById('editProductModal'));
+                        modal.show();
+                    })
+                    .catch(error => console.error('Error loading modal:', error));
+            }
+
+            function loadAddProductModal() {
+                fetch(`/Admin/Create`)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('addProductModalContent').innerHTML = data;
+                        var modal = new bootstrap.Modal(document.getElementById('addProductModal'));
+                        modal.show();
+                    })
+                    .catch(error => console.error('Error loading add product modal:', error));
+            }
+        </script>
+}

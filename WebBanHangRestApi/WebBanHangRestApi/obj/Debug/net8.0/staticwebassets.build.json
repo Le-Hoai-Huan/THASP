@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hi1o53Op2Q7QemaLkEcfUegYNw4SjLGjwTR1AEXNP1c=",
+  "Source": "WebBanHangRestApi",
+  "BasePath": "_content/WebBanHangRestApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

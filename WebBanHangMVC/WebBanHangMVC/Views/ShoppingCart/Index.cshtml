@@ -1,0 +1,88 @@
+﻿@model ShoppingCart
+<div class="container mt-4">
+    <h2 class="mb-4">Giỏ Hàng</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Sản Phẩm</th>
+                    <th scope="col">Số Lượng</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Tổng Tiền</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>
+                                <div class="quantity-control">
+                                    <form asp-action="UpdateQuantity" method="post" class="d-inline">
+                                        <input type="hidden" name="productId" value="@item.ProductId" />
+                                        <input type="hidden" name="quantity" value="@(item.Quantity - 1)" />
+                                        <button type="submit" class="btn btn-outline-secondary btn-sm quantity-btn">-</button>
+                                    </form>
+                                    <span class="quantity-display">@item.Quantity</span>
+                                    <form asp-action="UpdateQuantity" method="post" class="d-inline">
+                                        <input type="hidden" name="productId" value="@item.ProductId" />
+                                        <input type="hidden" name="quantity" value="@(item.Quantity + 1)" />
+                                        <button type="submit" class="btn btn-outline-secondary btn-sm quantity-btn">+</button>
+                                    </form>
+                                </div>
+                            </td>
+                            <td>@item.Price</td>
+                            <td>@(item.Price * item.Quantity)</td>
+                            <td>
+                                <a asp-action="RemoveFromCart" 
+                                   asp-route-productId="@item.ProductId" 
+                                   class="btn btn-sm btn-danger">Remove</a>
+                            </td>
+                        </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-end fw-bold">Tổng tiền:</td>
+                    <td class="fw-bold">@Model.Items.Sum(item => item.Price * item.Quantity)</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-end gap-2 mt-3">
+        <a asp-action="Checkout" 
+           class="btn btn-success">Tới trang thanh toán</a>
+        <a asp-controller="Product" 
+           asp-action="Index" 
+           class="btn btn-primary">Quay lại trang chủ</a>
+    </div>
+</div>
+
+<style>
+    .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .quantity-btn {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1;
+        border-radius: 5px;
+    }
+
+    .quantity-display {
+        width: 40px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 5px;
+    }
+</style>

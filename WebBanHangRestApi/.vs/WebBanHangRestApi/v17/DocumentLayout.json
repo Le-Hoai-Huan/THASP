@@ -1,0 +1,215 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\controllers\\productapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\controllers\\productapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\webbanhangrestapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\webbanhangrestapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\model\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\model\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Migrations\\20250403005501_inital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebBanHangRestApi\\Migrations\\20250403005501_inital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|d:\\2025-hk2-nam3\\new folder\\webbanhangrestapi\\webbanhangrestapi\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB4D933D-DC05-4866-B2DA-B90BADFF0F8D}|WebBanHangRestApi\\WebBanHangRestApi.csproj|solutionrelative:webbanhangrestapi\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebBanHangRestApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-03T02:51:51.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductApiController.cs",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Controllers\\ProductApiController.cs",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\Controllers\\ProductApiController.cs",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Controllers\\ProductApiController.cs",
+              "RelativeToolTip": "WebBanHangRestApi\\Controllers\\ProductApiController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T01:00:25.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250403005501_inital.cs",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Migrations\\20250403005501_inital.cs",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\Migrations\\20250403005501_inital.cs",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Migrations\\20250403005501_inital.cs",
+              "RelativeToolTip": "WebBanHangRestApi\\Migrations\\20250403005501_inital.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:55:01.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\appsettings.json",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\appsettings.json",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\appsettings.json",
+              "RelativeToolTip": "WebBanHangRestApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-03T00:53:44.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\appsettings.Development.json",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\appsettings.Development.json",
+              "RelativeToolTip": "WebBanHangRestApi\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-03T00:53:43.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebBanHangRestApi.http",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\WebBanHangRestApi.http",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\WebBanHangRestApi.http",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\WebBanHangRestApi.http",
+              "RelativeToolTip": "WebBanHangRestApi\\WebBanHangRestApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-04-03T00:53:24.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\Program.cs",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Program.cs",
+              "RelativeToolTip": "WebBanHangRestApi\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:44:38.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\model\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\model\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\model\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WebBanHangRestApi\\model\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:51:23.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\Repository\\ProductRepository.cs",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "WebBanHangRestApi\\Repository\\ProductRepository.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAA7wC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:50:43.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Repository\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\Repository\\IProductRepository.cs",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\Repository\\IProductRepository.cs",
+              "RelativeToolTip": "WebBanHangRestApi\\Repository\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:50:23.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\model\\Product.cs",
+              "RelativeDocumentMoniker": "WebBanHangRestApi\\model\\Product.cs",
+              "ToolTip": "D:\\2025-HK2-NAM3\\New folder\\WebBanHangRestApi\\WebBanHangRestApi\\model\\Product.cs",
+              "RelativeToolTip": "WebBanHangRestApi\\model\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:49:46.799Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

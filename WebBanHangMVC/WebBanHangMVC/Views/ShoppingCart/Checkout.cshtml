@@ -1,0 +1,103 @@
+﻿@model Order
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-primary">Checkout</h2>
+    <div class="card shadow-lg border-0">
+        <div class="card-body p-4">
+            <form asp-action="Checkout" method="post" class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Shipping Address -->
+                        <div class="mb-4 position-relative">
+                            <label asp-for="ShippingAddress" class="form-label fw-bold text-dark">
+                                <i class="bi bi-geo-alt-fill me-2 text-primary"></i>Shipping Address
+                            </label>
+                            <input asp-for="ShippingAddress" class="form-control form-control-lg custom-input" required />
+                            <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="mb-4 position-relative">
+                            <label asp-for="Notes" class="form-label fw-bold text-dark">
+                                <i class="bi bi-chat-square-text-fill me-2 text-primary"></i>Notes (Optional)
+                            </label>
+                            <textarea asp-for="Notes" class="form-control custom-textarea" rows="4"></textarea>
+                            <span asp-validation-for="Notes" class="text-danger"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg custom-btn">
+                                <i class="bi bi-cart-check-fill me-2"></i>Place Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+    .card {
+        border-radius: 15px;
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    }
+
+    .custom-input, .custom-textarea {
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .custom-input:focus, .custom-textarea:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+        transform: scale(1.01);
+    }
+
+    .custom-textarea {
+        resize: none;
+    }
+
+    .custom-btn {
+        border-radius: 10px;
+        padding: 12px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #0d6efd, #6610f2);
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+    .custom-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+    }
+
+    .text-primary {
+        color: #0d6efd !important;
+    }
+</style>
+
+<!-- Client-side validation script -->
+@section Scripts {
+            <script>
+                // Bootstrap 5 form validation
+                (function () {
+                    'use strict'
+                    var forms = document.querySelectorAll('.needs-validation')
+                    Array.prototype.slice.call(forms).forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+                })()
+            </script>
+}

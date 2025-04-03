@@ -1,0 +1,47 @@
+﻿@model WebBanHangMVC.Models.Product
+
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Thêm Sản Phẩm";
+}
+
+<div class="container py-5">
+    <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="max-width: 600px; margin: 0 auto;">
+        <div class="card-header bg-success text-white text-center py-4">
+            <h2 class="fw-bold">➕ Thêm Sản Phẩm Mới</h2>
+        </div>
+        <div class="card-body p-5">
+            <form asp-action="Add" method="post" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label asp-for="Name" class="form-label fw-bold">📦 Tên Sản Phẩm</label>
+                    <input asp-for="Name" class="form-control rounded-4" placeholder="Nhập tên sản phẩm" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="Price" class="form-label fw-bold">💰 Giá</label>
+                    <input asp-for="Price" class="form-control rounded-4" placeholder="Nhập giá sản phẩm" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="Description" class="form-label fw-bold">📝 Mô Tả</label>
+                    <textarea asp-for="Description" class="form-control rounded-4" rows="4" placeholder="Nhập mô tả sản phẩm"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="CategoryId" class="form-label fw-bold">🏷️ Danh Mục</label>
+                    <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select rounded-4">
+                        <option value="">-- Chọn Danh Mục --</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="ImageUrl" class="form-label fw-bold">🖼️ Hình Ảnh Sản Phẩm</label>
+                    <input type="file" asp-for="ImageUrl" class="form-control rounded-4" />
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success btn-lg px-5 py-2 rounded-4">✅ Thêm</button>
+                    <a asp-action="Index" class="btn btn-secondary btn-lg px-5 py-2 rounded-4">❌ Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

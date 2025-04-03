@@ -1,0 +1,49 @@
+﻿@model WebBanHangMVC.Models.Category
+
+@{
+    ViewData["Title"] = "Xóa danh mục";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-danger text-white">
+            <h4 class="mb-0">Xóa danh mục</h4>
+        </div>
+        <div class="card-body">
+            <p class="fs-5">Bạn có chắc chắn muốn xóa <strong>@Model.Name</strong> không?</p>
+        </div>
+        <div class="card-footer text-center">
+            <form asp-action="DeleteConfirmed" method="post">
+                <input type="hidden" asp-for="Id" />
+                <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                    <i class="bi bi-trash"></i> Xóa
+                </button>
+                <a asp-action="Index" class="btn btn-outline-primary">
+                    <i class="bi bi-arrow-left"></i> Quay lại
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xác Nhận Xóa -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xóa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa danh mục <strong>@Model.Name</strong> không? Hành động này không thể hoàn tác!
+            </div>
+            <div class="modal-footer">
+                <form asp-action="DeleteConfirmed" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Xóa ngay</button>
+                </form>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            </div>
+        </div>
+    </div>
+</div>

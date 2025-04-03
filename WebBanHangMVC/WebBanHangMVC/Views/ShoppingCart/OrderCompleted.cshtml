@@ -1,0 +1,65 @@
+﻿@model int
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 text-center">
+        <div class="card-body p-5">
+            <div class="mb-4">
+                <i class="bi bi-check-circle-fill display-1 text-success"></i>
+            </div>
+            <h2 class="mb-3 text-primary">Order Completed</h2>
+            <p class="lead text-muted mb-4">
+                Your order with ID <strong>#@Model</strong> has been placed successfully.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary custom-btn">
+                    <i class="bi bi-house-door-fill me-2"></i>Quay Lại Trang Chủ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+    .card {
+        border-radius: 20px;
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    }
+
+    .text-primary {
+        color: #0d6efd !important;
+    }
+
+    .text-success {
+        color: #28a745 !important;
+    }
+
+    .custom-btn {
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary.custom-btn {
+        background: linear-gradient(90deg, #0d6efd, #6610f2);
+        border: none;
+    }
+
+    .btn-outline-primary.custom-btn {
+        border: 2px solid #0d6efd;
+    }
+
+    .custom-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    }
+
+    .btn-outline-primary.custom-btn:hover {
+        background: #0d6efd;
+        color: white;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+    }
+</style>
